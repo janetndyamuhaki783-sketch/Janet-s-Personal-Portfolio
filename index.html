@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio | NDYAMUHAKI JANET </title>
+  <style>
+    :root { --ink:#17212b; --muted:#64748b; --paper:#f7f8fc; --accent:#6c63ff; --card:#fff; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,Arial,sans-serif; color:var(--ink); background:var(--paper); line-height:1.6; }
+    a { color:inherit; text-decoration:none; }
+    .nav { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:20px max(6%, calc((100% - 1120px)/2)); background:#fff; position:sticky; top:0; z-index:5; box-shadow:0 2px 18px #17212b0a; }
+    .brand { font-weight:800; letter-spacing:-.04em; font-size:1.2rem; } .brand span { color:var(--accent); }
+    .navlinks { display:flex; gap:20px; flex-wrap:wrap; font-size:.92rem; color:#526071; }
+    .navlinks a:hover { color:var(--accent); }
+    .wrap { width:min(1120px,88%); margin:auto; }
+    .hero { padding:92px 0 80px; background:radial-gradient(circle at 80% 15%,#dedcff 0,transparent 30%),linear-gradient(135deg,#f7f8fc,#f0efff); }
+    .hero-grid { display:grid; grid-template-columns:1.4fr .8fr; gap:55px; align-items:center; }
+    .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.16em; font-size:.78rem; font-weight:800; }
+    h1 { font-size:clamp(2.7rem,6vw,5rem); line-height:1.05; letter-spacing:-.06em; margin:14px 0 20px; }
+    h1 span { color:var(--accent); }
+    .lead { color:#586579; max-width:610px; font-size:1.12rem; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
+    .btn { display:inline-block; border:1px solid var(--accent); padding:11px 18px; border-radius:12px; font-weight:700; }
+    .primary { background:var(--accent); color:white; } .secondary { color:var(--accent); background:white; }
+    .portrait { aspect-ratio:4/4.5; border-radius:28px; background:linear-gradient(145deg,#b8b3ff,#ecebff 55%,#d9f4ed); display:grid; place-items:center; box-shadow:0 25px 60px #6c63ff22; }
+    .avatar { width:170px; height:170px; border-radius:50%; background:#fff9; display:grid; place-items:center; font-size:4rem; }
+    section { padding:76px 0; }
+    .section-head { margin-bottom:30px; } .section-head p { color:var(--muted); margin-top:5px; }
+    h2 { font-size:clamp(1.8rem,3vw,2.6rem); line-height:1.2; letter-spacing:-.04em; margin:0; }
+    .about-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:34px; }
+    .panel,.card { background:var(--card); border:1px solid #e9ebf3; border-radius:20px; padding:25px; box-shadow:0 10px 30px #17212b05; }
+    .stats { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+    .stat strong { display:block; color:var(--accent); font-size:1.5rem; }
+    .muted { color:var(--muted); }
+    .timeline { display:grid; gap:14px; }
+    .timeline-item { display:flex; gap:18px; align-items:flex-start; }
+    .dot { width:12px; height:12px; margin-top:8px; border-radius:50%; background:var(--accent); flex:0 0 auto; box-shadow:0 0 0 6px #6c63ff18; }
+    .timeline-item h3,.card h3 { margin:0 0 5px; }
+    .timeline-item p { margin:4px 0; color:var(--muted); }
+    .skills { display:flex; flex-wrap:wrap; gap:10px; }
+    .tag { padding:8px 13px; border-radius:999px; background:#efeeff; color:#5149d7; font-weight:700; font-size:.9rem; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .project-icon { width:46px; height:46px; display:grid; place-items:center; background:#efeeff; border-radius:14px; font-size:1.35rem; margin-bottom:17px; }
+    .card p { color:var(--muted); }
+    .project-link { color:var(--accent); font-weight:800; }
+    .hobbies { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+    .hobby { text-align:center; padding:20px 12px; background:white; border:1px solid #e9ebf3; border-radius:18px; }
+    .hobby span { display:block; font-size:1.8rem; margin-bottom:7px; }
+    .contact { background:#191b32; color:white; border-radius:28px; padding:42px; display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:center; }
+    .contact p { color:#c7c9db; } .contact .btn { background:var(--accent); color:white; }
+    .contact-list { display:grid; gap:12px; color:#f0efff; overflow-wrap:anywhere; }
+    footer { padding:25px 0; text-align:center; color:var(--muted); font-size:.9rem; }
+    @media(max-width:760px) { .nav { align-items:flex-start; flex-direction:column; } .navlinks { gap:12px; } .hero-grid,.about-grid,.contact { grid-template-columns:1fr; } .hero { padding:60px 0; } .portrait { max-width:360px; } .cards { grid-template-columns:1fr; } .hobbies { grid-template-columns:repeat(2,1fr); } section { padding:55px 0; } .contact { padding:28px; } }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="#home">Your<span>Portfolio.</span></a>
+    <div class="navlinks">
+      <a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a>
+      <a href="#projects">Projects</a><a href="#interests">Interests</a><a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <header class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Hello, welcome to my portfolio</div>
+          <h1>Hi, I'm <span> NDYAMUHAKI JANET.</span><br />I'm a motivated student who loves learning new things.</h1>
+          <p class="lead">I’m a student and aspiring professional who enjoys learning new skills, solving problems, and embraces team work.</p>
+          <div class="actions"><a class="btn primary" href="#projects">Explore my work ↗</a><a class="btn secondary" href="#contact">Get in touch</a></div>
+        </div>
+        <div class="portrait" aria-label="Placeholder for your profile photo"><div class="avatar">👋</div></div>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">A little about me</div><h2>Curious by nature. Growing every day.</h2></div>
+        <div class="about-grid">
+          <div class="panel"><p>My name is <strong>Your Name</strong>. I’m interested in coding, computational  biology, creativity, and lifelong learning. I like working with others, exploring new ideas, travelling and building my knowledge through practical experience.</p><p class="muted"> i am a student currently pursuing my Bachelor's degree in Data Science and Analytics at Uganda Christian University. The life i yearn for and fear of disappointing myself and family are my major motivations.I personally, i'm working towards acquiring skills and qualifications of bioinformatics.</p></div>
+          <div class="stats">
+            <div class="panel stat"><strong>01</strong><span>Keep learning</span></div>
+            <div class="panel stat"><strong>02</strong><span>Build useful things</span></div>
+            <div class="panel stat"><strong>03</strong><span>Work with others</span></div>
+            <div class="panel stat"><strong>04</strong><span>Think creatively</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" style="background:#fff">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">My background</div><h2>Education</h2><p>My learning journey so far.</p></div>
+        <div class="panel timeline">
+          <div class="timeline-item"><div class="dot"></div><div><h3>I'm currently enrolled in Uganda Christian University</h3><p> Bachelors in Science Data Science and Analytics· 2026 – Present</p><p>Include relevant subjects, achievements, clubs, or activities.</p></div></div>
+          <div class="timeline-item"><div class="dot"></div><div><h3> Secondary level, Bweranyangi Girls' Secondary School. /n Highschool, St. Mary,s Kitende School</h3><p>Qualification earned; UCE Certificate and UACE certificate. · 2019-2023 and 2024-2025</p><p>Thrilled and grateful to finish these levels of education and how far i have come.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">What I bring</div><h2>Skills</h2><p>Edit these tags to match your actual abilities.</p></div>
+        <div class="panel skills"><span class="tag">Python basics</span><span class="tag">Photo and video editing</span><span class="tag">Communication</span><span class="tag">Teamwork</span><span class="tag">Problem-solving</span><span class="tag">Time management</span><span class="tag">Research</span><span class="tag">Creativity</span></div>
+      </div>
+    </section>
+
+    <section id="projects" style="background:#fff">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Things I've worked on</div><h2>Featured projects</h2><p>class assignments which included data entry, volunteer work.</p></div>
+        <div class="cards">
+          <article class="card"><div class="project-icon">💻</div><h3>Personal Portfolio</h3><p>A responsive website introducing me, my skills, education, and goals.</p><a class="project-link" href="#contact">Ask me about it ↗</a></article>
+          <article class="card"><div class="project-icon">🐍</div><h3>Python Practice</h3><p>A collection of small Python exercises that helped me practise logic and programming fundamentals.</p><a class="project-link" href="#contact">Ask me about it ↗</a></article>
+          <article class="card"><div class="project-icon">✨</div><h3>Your next project</h3><p> We are currently working on a project called MyCampusCare for making medical and counselling appointmests in the university. we are using different tools such as html,python and others for web desgining and developing. This project is majorly to help in time management and reduce on conjestion at these facilities. .</p><a class="project-link" href="#contact">View details ↗</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="interests">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Outside of work</div><h2>Interests & hobbies</h2><p>The things that keep me inspired and balanced, include spending time with family and friends, travelling and trying new things out.</p></div>
+        <div class="hobbies">
+          <div class="hobby"><span>📚</span><strong>Reading</strong></div><div class="hobby"><span>🎧</span><strong>Music</strong></div>
+          <div class="hobby"><span>🌍</span><strong>Exploring</strong></div><div class="hobby"><span>🧩</span><strong>Photography</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap contact">
+        <div><div class="eyebrow">Let's connect</div><h2>Have a project or opportunity in mind?</h2><p>I’d be happy to hear from you. Reach out through any of the channels listed here.</p><a class="btn" href="mailto:your.janetndyamuhaki18@gmail.com">Email me ↗</a></div>
+        <div class="contact-list"><div> 0794335387 &nbsp; janetndyamuhaki18@gmail.com </div><div>📍 &nbsp; Kampala City, Uganda</div><div>💼 &nbsp; <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn profile- none </a></div><div>💻 &nbsp; <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub profile</a></div></div>
+      </div>
+    </section>
+  </main>
+  <footer>© <span id="year"></span> NDYAMUHALI JANET · Made with curiosity and care.</footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
